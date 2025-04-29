@@ -1,5 +1,5 @@
-function updateTimer() {
-    ocument.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
+  // Tanggal lahir dimulai dari jam 00:00 WIB (UTC+7)
   const birthDate = new Date("2007-04-30T00:00:00+07:00");
 
   function updateAge() {
