@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffe6f0; /* Pink pastel */
+    color: #d63384; /* Pink cerah */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative; /* Tambahkan ini agar tombol absolute tetap di dalam body */
+}
+
+.container {
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(214, 51, 132, 0.3);
+    max-width: 600px;
+    width: 90%; /* Agar di HP tidak kepotong */
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.message {
+    font-size: 1.2em;
+    background-color: #ffd6e7;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Tombol Next */
+.next-button {
+    position: absolute;
+    bottom: 20px; /* Lebih dekat di mobile */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #d63384;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    .timer {
+        font-size: 1.5em;
+    }
+    .message {
+        font-size: 1em;
+    }
+    .next-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        bottom: 15px;
+    }
+}
